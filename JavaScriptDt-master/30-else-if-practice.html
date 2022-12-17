@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="number" id="price" placeholder="Please enter the price" />
+        <button onclick="discount()">CALCULATE</button>
+        <p id="text">Discounted Price:</p>
+        <script>
+            function discount() {
+                let price = Number(document.querySelector("#price").value);
+                let textEl = document.querySelector("#text");
+
+                if (price > 500) {
+                    price *= 0.9; // price = price - (price/10);
+                } else if (price > 300) {
+                    price *= 0.93; // price = price - (price*7)/100;
+                } else {
+                    price *= 0.95; // price = price - (price/20);
+                }
+
+                textEl.innerText = `Discounted Price: ${price}`;
+            }
+        </script>
+    </body>
+</html>

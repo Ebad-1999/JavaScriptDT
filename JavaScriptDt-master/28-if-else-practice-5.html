@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            button {
+                background-color: black;
+                color: white;
+            }
+​
+            .dark {
+                background-color: black;
+                color: white;
+            }
+​
+            .dark button {
+                background-color: white;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>DARK MODE LIGHT MODE</h1>
+​
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+            similique error, porro, iste cumque voluptatum corporis officiis
+            suscipit odio itaque fugit est tempore voluptate aperiam.
+            Repellendus blanditiis quae amet dicta?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            itaque obcaecati architecto nostrum corrupti nulla deserunt,
+            doloremque, nesciunt aut labore aperiam velit repellat repudiandae
+            beatae? Eveniet provident molestias vero quasi?
+        </p>
+        <button onclick="setDarkMode()" id="btnMode">DARK MODE</button>
+
+        <script>
+            let mode = "LIGHT MODE";
+
+            function setDarkMode() {
+                let btnMode = document.querySelector("#btnMode");
+                let body = document.querySelector("body");
+
+                btnMode.innerText = mode;
+
+                if (mode === "LIGHT MODE") {
+                    body.classList.add("dark");
+                    mode = "DARK MODE";
+                    console.log(mode);
+                } else {
+                    body.classList.remove("dark");
+                    mode = "LIGHT MODE";
+                    console.log(mode);
+                }
+            }
+        </script>
+    </body>
+</html>
+Collapse
+
+
+
