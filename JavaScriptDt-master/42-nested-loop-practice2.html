@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NESTED LOOPS PRACTICE — 2</title>
+    </head>
+    <body>
+        <h1>NESTED LOOPS PRACTICE — 2</h1>
+        <script>
+            let row = 6;
+            let pattern = "";
+
+            for (var i = 1; i <= row; i++) {
+                for (var k = 1; k <= i; k++) {
+                    pattern += "*";
+                }
+                pattern += "\n";
+            }
+
+            // pattern = "*\n**\n***\n****\n*****\n******\n";
+
+            console.log(pattern);
+        </script>
+    </body>
+</html>

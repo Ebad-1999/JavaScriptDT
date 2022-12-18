@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FOR PRACTICE — 3</title>
+    </head>
+    <body>
+        <h1>FOR PRACTICE — 3</h1>
+
+        <script>
+            let sPoint = 500;
+            let cPoint = 1000;
+            let d3 = 0;
+            let d7 = 0;
+            let d37 = 0;
+
+            for (let i = sPoint; i <= cPoint; i++) {
+                if (i % 3 === 0) {
+                    d3++;
+                }
+
+                if (i % 7 === 0) {
+                    d7++;
+                }
+
+                if (i % 3 === 0 && i % 7 === 0) {
+                    d37++;
+                }
+            }
+
+            alert(`${d3} numbers are divisible by 3
+               ${d7} numbers are divisible by 7 
+               ${d37} numbers are divisible by both 3 and 7
+            `);
+        </script>
+    </body>
+</html>
