@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HOISTING</title>
+    </head>
+    <body>
+        <h1>HOISTING</h1>
+        <script>
+            /*
+
+—> Hoisting is JavaScript's default behavior of moving declarations to the top.
+
+// possible with "var" declarations
+            
+            */
+
+            // var a;
+            // function calculateAge() {
+            //     console.log(100);
+            // }
+
+            // // TEMPORAL DEADZONE — b - c
+
+            // // console.log(b);
+            // // console.log(c);
+            // // newFunc();
+            // newFunc()
+            // console.log(hoist);
+
+            // console.log(a);
+            // var a = 5;
+            // let b = 10;
+            // const c = 100;
+            // console.log(a);
+
+            // // calculateAge();
+
+            // // console.log(a);
+            // // var a = 5;
+
+            // // function calculateAge() {
+            // //     console.log(100);
+            // // }
+
+            // const newFunc = () => {
+            //     console.log(100);
+            // }
+
+            // const myFunction = () => {
+            //     console.log(`Inside myFunction - 1: ${num}`);
+            //     num = 7;
+            //     console.log(`Inside myFunction - 2: ${num}`);
+            //     var num = 8;
+            // };
+
+            const myFunction = () => {
+                var num;
+                console.log(`Inside myFunction - 1: ${num}`);
+                num = 7;
+                console.log(`Inside myFunction - 2: ${num}`);
+                num = 8;
+                console.log(num);
+            };
+
+            myFunction();
+        </script>
+    </body>
+</html>

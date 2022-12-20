@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EVENT HANDLING</title>
+    </head>
+    <body>
+        <h1>EVENT HANDLING</h1>
+        <button onclick="onClick1()">Button 1</button>
+        <button id="btn2">Button 2</button>
+        <button id="btn3">Button 3</button>
+        <button id="btn4">Button 4</button>
+        <button id="btn5">Button 5</button>
+        <button id="btn6">Button 6</button>
+
+        <script>
+            //1st method
+            function onClick1(e) {
+                alert("1st button is clicked");
+            }
+
+            //2nd method
+            function onClick2(e) {
+                alert("2nd button is clicked");
+            }
+
+            document.querySelector("#btn2").onclick = onClick2;
+
+            //3rd method
+            document.querySelector("#btn3").onclick = function (e) {
+                alert("3rd button is clicked");
+            };
+
+            //4th method
+            document.querySelector("#btn4").onclick = (e) => {
+                alert("4th button is clicked");
+            };
+
+            //5th method
+            const onClick5 = (e) => {
+                alert("5th button is clicked");
+            };
+
+            document.querySelector("#btn5").addEventListener("click", onClick5);
+
+            //6th method
+
+            document.querySelector("#btn6").addEventListener("click", (e) => {
+                console.log(e);
+                alert("6th button is clicked");
+            });
+        </script>
+    </body>
+</html>

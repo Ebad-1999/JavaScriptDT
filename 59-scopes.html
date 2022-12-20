@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SCOPES</title>
+    </head>
+    <body>
+        <h1>SCOPES</h1>
+        <script>
+            /*
+            
+3 KINDS OF SCOPES:
+
+1 - GLOBAL SCOPE
+2 - FUNCTION SCOPE
+3 - BLOCK SCOPE // only valid for "let" and "const"
+
+            */
+
+            let z = 15;
+
+            const test1 = () => {
+                let x = 40;
+                console.log(`value of x variable: ${x}`);
+                console.log(`value of z variable: ${z}`);
+            };
+
+            const test2 = () => {
+                let x = 33;
+                let z = 11;
+                g = 33; // JavaScript regards undefined variables as global
+                if (x > 20) {
+                    let y = 15;
+                    y += 10;
+                    var t = 33;
+                }
+                //console.log(y);
+                console.log(z);
+                console.log(t);
+            };
+
+            const test3 = () => {
+                console.log(z);
+                console.log(g);
+            };
+
+            //console.log(`value of x variable: ${x}`);
+
+            //console.log(`value of z variable: ${z}`);
+
+            test1();
+            test2();
+            test3();
+        </script>
+    </body>
+</html>

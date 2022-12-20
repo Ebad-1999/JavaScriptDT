@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            li:nth-child(1) span {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="number" placeholder="%" id="percentage" />
+        <button onclick="applyDiscount()">Apply</button>
+        <ul>
+            <li>Graphics Card <span>1000</span>$</li>
+            <li>Monitor <span>400</span>$</li>
+            <li>Keyboard <span>50</span>$</li>
+            <li>Headphone <span>30</span>$</li>
+        </ul>
+
+        <script>
+            function applyDiscount() {
+                let percentage = Number(
+                    document.querySelector("#percentage").value
+                );
+
+                // let product1 = document.querySelector("li:nth-child(1) span");
+                // let product2 = document.querySelector("li:nth-child(2) span");
+                // let product3 = document.querySelector("li:nth-child(3) span");
+                // let product4 = document.querySelector("li:nth-child(4) span");
+
+                for (let i = 1; i <= 4; i++) {
+                    let product = document.querySelector(
+                        `li:nth-child(${i}) span`
+                    );
+                    product.innerText = (
+                        product.innerText -
+                        (product.innerText * percentage) / 100
+                    ).toFixed(0);
+                }
+
+                // product1.innerText =
+                //     product1.innerText -
+                //     (product1.innerText * percentage) / 100;
+                // product2.innerText =
+                //     product2.innerText -
+                //     (product2.innerText * percentage) / 100;
+                // product3.innerText =
+                //     product3.innerText -
+                //     (product3.innerText * percentage) / 100;
+                // product4.innerText =
+                //     product4.innerText -
+                //     (product4.innerText * percentage) / 100;
+            }
+        </script>
+    </body>
+</html>

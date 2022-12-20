@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>OBJECTS</title>
+    </head>
+    <body>
+        <h1>OBJECTS</h1>
+
+        <script>
+            // storing values inside primitive data types — hard to keep track of
+            const brand = "Mercedes";
+            const model = "S500";
+            const color = "beige";
+            const automatic = true;
+
+            console.log(brand);
+
+            // storing values inside objects — easier to keep track of
+            const car = {
+                brand: "Mercedes",
+                model: "S500",
+                color: "beige",
+                automatic: true,
+            };
+
+            console.log(car.brand); // reaching values of the objects
+
+            const newCar = {
+                brand: "Mercedes",
+                model: "S500",
+                color: "beige",
+                automatic: true,
+                age: 2022,
+                driver: {
+                    firstName: "John",
+                    lastName: "Doe",
+                },
+            };
+
+            console.log(car.driver.firstName);
+
+            const simpleArray = [1, 2, 3, 4, 5, 6];
+
+            const arrayOfObjects = [
+                {
+                    brand: "Mercedes",
+                    model: "S500",
+                    color: "beige",
+                    automatic: true,
+                },
+                {
+                    brand: "Mercedes",
+                    model: "S500",
+                    color: "beige",
+                    automatic: true,
+                },
+                {
+                    brand: "Mercedes",
+                    model: "S500",
+                    color: "beige",
+                    automatic: true,
+                },
+            ];
+        </script>
+    </body>
+</html>
