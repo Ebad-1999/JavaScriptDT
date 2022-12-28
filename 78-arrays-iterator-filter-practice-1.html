@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ARRAYS ITERATOR — FILTER PRACTICE — 1</title>
+    </head>
+    <body>
+        <h1>ARRAYS ITERATOR — FILTER PRACTICE — 1</h1>
+        <script>
+            /*
+Q — Write a function that filters the individuals arrays, and returns name of the individuals starting with specified in the parameter, and put them into new array. 
+
+const individuals = ["Alex","John","Hogr","Kamal","Jack","Power"];
+
+            */
+            const individuals = [
+                "Alex",
+                "John",
+                "Hogr",
+                "Kamal",
+                "Jack",
+                "Power",
+            ];
+
+            const filteredArrayByFirstLetter = (letter, arr) => {
+                const firstLetter = letter.toUpperCase();
+                const filteredArray = arr.filter((name) =>
+                    name.startsWith(firstLetter)
+                );
+                return filteredArray;
+            };
+
+            console.log(filteredArrayByFirstLetter("j", individuals));
+        </script>
+    </body>
+</html>

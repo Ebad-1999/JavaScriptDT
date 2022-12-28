@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ARRAYS PRACTICE — 3</title>
+    </head>
+    <body>
+        <h1>ARRAYS PRACTICE — 3</h1>
+        <script>
+            /* 
+            
+Q — Create a program that finds the difference between the maximum and the minimum number in an array
+
+            */
+
+            const numbers = [10, 55, 26, 18, 22, 39, 92, 13, 5, 44];
+            const numbers1 = [4, 55, 26, 68, 22, 5, 92, 13, 5, 44];
+            const numbers2 = [10, 55, 68, 18, 22, 239, 4, 13, 68, 44];
+
+            const findMinMaxDiff = (arr) => {
+                let maxNum = arr[0];
+                let minNum = arr[0];
+
+                for (let i = 1; i < arr.length; i++) {
+                    if (arr[i] > maxNum) {
+                        maxNum = arr[i];
+                    }
+
+                    if (arr[i] < minNum) {
+                        minNum = arr[i];
+                    }
+                }
+
+                console.log(maxNum, minNum);
+
+                let diff = maxNum - minNum;
+                return diff;
+            };
+
+            console.log(findMinMaxDiff(numbers2));
+        </script>
+    </body>
+</html>
