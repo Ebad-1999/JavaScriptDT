@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FOR IN PRACTICE — 1</title>
+    </head>
+    <body>
+        <h1>FOR IN PRACTICE — 1</h1>
+        <script>
+            /*
+    
+Q — Write a program that takes items from two different arrays
+ and puts the items with matching indexes in a new array using “for in” 
+    
+    */
+            const fNames = [
+                "Sauron",
+                "Frodo",
+                "Galadriel",
+                "Aragorn",
+                "Gandalf",
+            ];
+
+            const lNames = [
+                "Mordor",
+                "Shire",
+                "Valinor",
+                "Rivendell",
+                "Valinor",
+            ];
+
+            const mergeNames = (arr1, arr2) => {
+                let mergedNames = [];
+
+                for (let i in arr1) {
+                    mergedNames[i] = `${arr1[i]} of ${arr2[i]}`;
+                }
+
+                return mergedNames;
+            };
+
+            console.log(mergeNames(fNames, lNames));
+
+            for (let item in string) {
+                console.log(item);
+            }
+        </script>
+    </body>
+</html>

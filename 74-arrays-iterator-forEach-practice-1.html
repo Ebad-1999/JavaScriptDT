@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ARRAYS ITERATOR — FOREACH PRACTICE — 1</title>
+    </head>
+    <body>
+        <h1>ARRAYS ITERATOR — FOREACH PRACTICE — 1</h1>
+        <script>
+            /*
+Q — Write a program that multiplies the every element inside an array with 5 and return it.
+
+myArr = [ -5, 24, -13, 7, 3 ];
+
+            */
+
+            const myArr = [-5, 24, -13, 7, 3];
+            const newArr = [];
+
+            myArr.forEach((num, index) => {
+                newArr[index] = num * 5;
+            });
+
+            // for (var i = 0; i < myArr.length; i++) {
+            //     myArr[i] = myArr[i] * 5;
+            // }
+
+            /*
+            
+            myArr[0] = -5 * 5;
+            myArr[1] = 24 * 5;
+            myArr[2] = -13 * 5;
+            myArr[3] = 7 * 5;
+            myArr[4] = 3 * 5;
+
+            */
+
+            console.log(newArr);
+        </script>
+    </body>
+</html>
