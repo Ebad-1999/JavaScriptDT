@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM-ATTRIBUTE_METHODS</title>
+
+        
+       
+    </head>
+    <body>
+<input type="text" name="" id="inputText">
+<button id="btnAdd">Add</button>
+<button id="btnDelete">Delete</button>
+<ul id="list">
+  <li>Lorem.</li>
+  <li>Maiores.</li>
+  <li>Nemo.</li>
+  <li>Optio!</li>
+  <li>Velit?</li>
+</ul>
+        
+      <script>
+        
+        const listEl = document.getElementById("list");
+        const inputText = document.getElementById("inputText");
+
+        document.getElementById("btnAdd").addEventListener("click", ()=>{
+          const newList = document.createElement("li")
+          newList.innerHTML = inputText.value;
+          //listEl.appendChild(newList);
+          //listEl.append(newList, "Text Gello");
+          listEl.prepend(newList);
+
+        })
+
+        document.getElementById("btnDelete").addEventListener("click", ()=>{
+          if(listEl.querySelectorAll("li").length<=0) return;
+          listEl.querySelector("li:last-child").remove();
+
+        })
+        </script>
+    </body>
+</html>
