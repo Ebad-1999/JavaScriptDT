@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const student = {
+            firstName :"John",
+            lastName : "Smith",
+            age : 13,
+            number: "343"
+        }
+
+        let note = `${student.firstName} ${student.lastName}  is ${student.age}  years old`
+        console.log(note)
+
+        // const firstName = student.firstName;
+        // const lastName = student.lastName;
+        // const age = student.age;
+
+        const {firstName, lastName, age, number} = student;
+
+        note = `${firstName} ${lastName}  is ${age}  years old`
+        console.log(note)
+
+    </script>
+</body>
+</html>

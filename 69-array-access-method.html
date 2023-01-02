@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const animals = [
+            "Elephant",
+            "Bird",
+            "Mouse",
+            "Bird",
+            "Cat",
+            "Bird",
+
+        ];
+
+        console.log(animals.indexOf("Bird"));
+        console.log(animals.lastIndexOf("Bird"));
+        console.log(animals.indexOf("Horse"));
+
+        const letters = ["a", "b", "c", "d", "e", "f"];
+        const numbers = ["1", "2", "3", "4", "5", "6"];
+
+        const concattedArray = letters.concat(numbers, 7, 8, 9);
+        console.log(concattedArray);
+        //console.log((concattedArray).toString());
+        console.log(concattedArray);
+
+        const slicedArray = concattedArray.slice(5, 11);
+        console.log(slicedArray);
+
+        const joinedArray = concattedArray.join("_");
+        console.log(joinedArray);
+
+
+         
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-ATTRIBUTE-METHODS</title>
+
+    <style>
+
+    
+
+</style>
+
+</head>
+<body>
+    
+    <input type="text" id="inputText">
+    <button id="btnCheck" disabled >CHECK</button>
+
+    <script>
+        const input = document.getElementById("inputText");
+        document.getElementById("inputText").addEventListener("input", (e) =>{
+        
+        const enterdText = e.target.value;
+
+        if(enterdText && !isNaN(enterdText) && enterdText.length ===11){
+            btnCheck.removeAttribute("disabled");
+        }else{
+            btnCheck.setAttribute("disabled", "");
+
+        }
+
+
+    })
+    </script>
+
+    
+
+    
+   
+             
+
+</body>
+</html>

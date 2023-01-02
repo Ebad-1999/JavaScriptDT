@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-STYLE-METHODS</title>
+
+    <style>
+
+    .blue{
+        background-color: blue;
+        color: yellow;
+    }
+    .red{
+        background-color: red;
+        color: yellow;
+    }
+
+    
+
+    .black{
+        background-color: black;
+        color: white;
+
+    }
+
+</style>
+
+</head>
+<body>
+    
+    <p id="message">Lorem ipsum dolor sit amet.</p>
+    <button id="btnAdd">Add</button>
+    <button id="btnRemove">Remove</button>
+    <button id="btnToggle">Toggle</button>
+    <button id="btnReplace">Replace</button>
+
+    <script>
+        const message = document.getElementById("message");
+        document.getElementById("btnAdd").addEventListener("click", () => {
+            message.classList.add("blue" );
+
+        })
+
+        document.getElementById("btnRemove").addEventListener("click", () => {
+            message.classList.remove("blue" );
+
+        })
+
+        document.getElementById("btnToggle").addEventListener("click", () => {
+            message.classList.toggle("black" );
+
+        })
+
+       // if(message.classList.contains("black")){
+        //    message.classList.remove("black" );
+        // }else{
+         //   message.classList.add("black" );
+
+        // }
+
+        document.getElementById("btnReplace").addEventListener("click", () => {
+            message.classList.replace("blue", "red" );
+
+        })
+  
+
+    </script>
+
+
+    
+   
+             
+
+</body>
+</html>

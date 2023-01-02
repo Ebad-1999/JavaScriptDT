@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sum = (...num)=>{ //[3, 5, 6, 77]
+            const sum = num.reduce((total, item)=>total+item, 0)
+            console.log(sum)
+        }
+
+        sum(4, 6);
+
+        sum(4, 6, 6);
+        sum(4, 6, 6, 56, 7, 9);
+
+
+        const average = (name, surname, ...scores)=>{ 
+            const avg = scores.reduce((total, item)=>total+item, 0)
+            console.log(`${name} ${surname} has an average of ${(avg/scores.length).toFixed()}`)
+        }
+        average("Otgo","Ajk", 73, 90, 57 );
+    </script>
+</body>
+</html>

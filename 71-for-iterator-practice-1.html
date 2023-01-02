@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const numbers = [5, -8, 53, 76, 14, -6, -71, 45];
+
+        const findMaxAndMindiff = (arr) => {
+            let positive = 0;
+            let negative = 0;
+            for(let i = 0 ; i<arr.length ; i++) {
+                if(arr[i]>0 ){
+                    positive += arr[i];
+ 
+                }else{
+                    negative += arr[i];
+                }
+
+                let sum  = positive + negative;
+                return sum;
+
+                
+            }
+        };
+
+        console.log(findMaxAndMindiff(numbers));
+    </script>
+</body>
+</html>

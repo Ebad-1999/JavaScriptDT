@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-ACCESS-METHODS</title>
+</head>
+<body>
+    
+    <h1 id="hello">Hello JS</h1>
+    <P class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         A dolorem voluptatem eos maiores. Esse rerum, repudi
+         andae nostrum dolore fugit libero unde a. Id adipisci 
+         officia
+         voluptas nisi? Incidunt, aperiam corrupti?</P>
+
+         <P id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Commodi neque beatae, excepturi 
+             ratione autem tempora enim eius qui
+             s quas consectetur facilis amet suscipit, corporis 
+             eum doloribus laboriosam est! Autem, repudiandae?</P>
+
+             <script>
+                const h1El1 = document.querySelector("#hello")
+                console.log(h1El1);
+
+                const h1El2 = document.getElementById("hello")
+                console.log(h1El2);
+
+                const pItems = document.getElementsByTagName("p");
+                console.log(pItems[0]);
+             </script>
+
+</body>
+</html>

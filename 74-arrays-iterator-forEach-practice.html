@@ -7,13 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <p id ="message">We are almost finishing <span style="display : none"></span> </p>
-    <script>
-        const message =document.getElementById("message");
+    
 
-        console.log(message.innerText);
-        console.log(message.innerHTML);
-        console.log(message.textContent);
+    <script>
+
+        const myArray =[-5, 24, -13, 7, 3];
+
+        const muls = (arr) => {
+            
+            arr.forEach((item, index) =>{
+                arr[index] = item *5;
+            });
+        };
+
+         muls(myArray);
+         console.log(myArray);
     </script>
 </body>
 </html>

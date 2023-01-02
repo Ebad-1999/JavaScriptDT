@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-ATTRIBUTE-METHODS</title>
+
+    <style>
+
+    
+
+</style>
+
+</head>
+<body>
+
+    <input type="text" name="" id="inputText" placeholder="Enter the name to store" style="background-color: rgb(172, 212, 238);">
+    <button id="btnAdd" style="background-color: rgb(0, 132, 255);">Add</button>
+    <button id="btnDelete" style="background-color: rgb(255, 72, 0);">Delete</button>
+
+    <ul id="list">
+        <li>Lorem.</li>
+        <li>Quae.</li>
+        <li>Architecto.</li>
+        <li>Consequuntur?</li>
+        <li>Tenetur.</li>
+    </ul>
+
+    <script>
+        const listEl = document.getElementById("list");
+        const inputText = document.getElementById("inputText");
+
+        document.getElementById("btnAdd").addEventListener("click", () =>{
+            const newList = document.createElement("li");
+             newList.innerHTML = inputText.value;
+            //listEl.appendChild(newList);
+            //listEl.append(newList);
+            listEl.prepend(newList);
+        })
+
+        document.getElementById("btnDelete").addEventListener("click", () =>{
+            if(listEl.querySelectorAll("li").length<=0 )return;
+            //listEl.querySelector("li:first-child").remove();
+            listEl.querySelector("li:last-child").remove();
+        })
+
+
+    </script>
+    
+    
+    
+
+    
+
+    
+   
+             
+
+</body>
+</html>
