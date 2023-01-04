@@ -8,11 +8,12 @@
 </head>
 <body>
     <script>
-        const sayHello = () => {
-            setTimeout(() => 
+        const sayHello = (() => {
+            setTimeout(() =>{ 
             console.log("Hello 2")
-}, 0)
-}
+        },0)
+    })
+
         console.log("Hello 1");
         sayHello();
         console.log("Hello 3");
